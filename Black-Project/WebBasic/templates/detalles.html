@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Empleado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalles.css') }}">
+</head>
+<body>
+    <div class="card mt-4">
+        <h1 class="text-center">Detalles de {{ empleado.nombre }} {{ empleado.apellido }}</h1>
+        <p><strong>Correo:</strong> {{ empleado.correo }}</p>
+        <p><strong>Departamento:</strong> {{ empleado.departamento }}</p>
+
+        <h3 class="mt-4">Porcentajes de la Rueda de la Vida</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Área</th>
+                    <th>Porcentaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for area, porcentaje in respuestas_json.items() %}
+                <tr>
+                    <td>{{ area }}</td>
+                    <td>{{ porcentaje }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3 class="mt-4">Gráfico de Rueda de la Vida</h3>
+
+        <!-- La imagen generada por Matplotlib con contenedor centrado -->
+        <div class="radar-container">
+            <img src="{{ img_data }}" alt="Rueda de la Vida" class="radar-chart">
+        </div>
+
+        <a href="{{ url_for('resultados') }}" class="btn btn-primary mt-4">Volver</a>
+    </div>
+</body>
+</html>

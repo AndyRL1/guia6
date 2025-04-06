@@ -1,0 +1,87 @@
+/* Estilo elegante y oscuro */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #f4f4f4;
+}
+
+/* Tarjetas */
+.card {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Encabezados */
+h1 {
+    color: #FFD700;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.table th {
+    background-color: #333;
+    color: #FFD700;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-info {
+    background: #1E90FF;
+    color: #fff;
+}
+
+.btn-warning {
+    background: #FFA500;
+    color: #121212;
+}
+
+.btn-danger {
+    background: #DC143C;
+    color: #fff;
+}
+
+/* Botón de regreso */
+.btn-back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-back:hover {
+    color: #fff;
+}

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    background: linear-gradient(to right, #1c1c1c, #000000);
+    color: #f1f1f1;
+}
+
+/* Estilo para tarjetas */
+.card {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px, rgba(255, 255, 255, 0.15) 0px 7px 13px -3px, rgba(255, 255, 255, 0.1) 0px -3px 0px inset;
+    border-radius: 10px;
+}
+
+h1, h3, h5 {
+    color: #e6e6e6;
+    text-align: center;
+}
+
+h5 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+/* Alinear etiquetas y campos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mb-3 {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Botón de envío */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e6e6e6;
+}
+
+/* Estilo del botón de regreso */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: #b3b3b3;
+}
+
+/* Estilo de la flecha */
+.arrow-left {
+    font-size: 20px;
+    margin-right: 8px;
+}

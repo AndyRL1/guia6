@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Black-Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultados.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="card mt-4">
+        <a href="/" class="btn-back">
+            <span class="arrow-left">&#8592;</span> Volver
+          </a>
+        <h1 class="text-center">Resultados de la Rueda de la Vida</h1>
+        <div class="text-right" style="margin-bottom: 20px;">
+            <a href="{{ url_for('descargar') }}" class="btn btn-success">
+                📥 Descargar todos los empleados (Excel)
+            </a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Departamento</th>
+                    <th>Ver Detalles</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleado in empleados %}
+                <tr>
+                    <td>{{ empleado.nombre }}</td>
+                    <td>{{ empleado.apellido }}</td>
+                    <td>{{ empleado.correo }}</td>
+                    <td>{{ empleado.departamento }}</td>
+                    <td>
+                        <a href="{{ url_for('ver_detalles', id=empleado.id) }}" class="btn btn-info">Ver</a>
+                    </td>
+                    
+                    <td><a href="{{ url_for('actualizar', id=empleado.id) }}" class="btn btn-warning">Actualizar</a></td>
+                    <td>
+                        <button class="btn btn-danger" onclick="confirmarEliminacion('{{ empleado.id }}')">
+                            Eliminar
+                        </button>
+                    </td>
+              
+
+                    
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para el modal de eliminación -->
+    <script>
+        function confirmarEliminacion(id) {
+            Swal.fire({
+                title: "¿Estás seguro?",
+                text: "Esta acción eliminará al empleado de forma permanente.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/eliminar/" + id;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

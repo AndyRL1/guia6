@@ -1,0 +1,10 @@
+This is a simple project: a webpage built using HTML 5, Bootstrap, and Flask with MongoDB as the database.
+
+The application allows users to interact with the 'rueda_vida' database, specifically the 'empleados' collection. Users can:
+- Insert, update, read, and delete employee data.
+- Complete a life balance survey based on the 'Rueda de la Vida' model.
+- View individual results and overall statistics.
+- Export data for further analysis.
+
+The project is part of Black Project and provides a modern UI with enhanced user interaction and visualizations.
+

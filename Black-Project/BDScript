@@ -1,0 +1,41 @@
+use rueda_vida;
+
+db.createCollection("empleados");
+
+db.empleados.insertMany([
+  {
+    "id": "5550098",
+    "nombre": "Fredrik Andres",
+    "apellido": "Solsa",
+    "correo": "fedesolo@argo.com",
+    "departamento": "Ventas",
+    "respuestas": {
+      "Área Física": [7, 6, 8, 9, 7],
+      "Área Personal": [8, 9, 6, 7, 8],
+      "Área Familiar": [6, 7, 8, 9, 7],
+      "Área Económica": [9, 8, 7, 6, 8],
+      "Área Profesional": [8, 7, 6, 9, 8],
+      "Área Social": [7, 8, 9, 6, 7],
+      "Área de Ocio": [8, 7, 9, 6, 8],
+      "Área Espiritual": [9, 8, 7, 6, 9]
+    }
+  },
+  {
+    "id": "9876576",
+    "nombre": "Angela Maria",
+    "apellido": "Urrutia",
+    "correo": "luisa987@yahoo.es",
+    "departamento": "Recursos Humanos",
+    "respuestas": {
+      "Área Física": [6, 7, 8, 9, 6],
+      "Área Personal": [8, 6, 7, 9, 8],
+      "Área Familiar": [7, 6, 9, 8, 7],
+      "Área Económica": [6, 7, 9, 8, 6],
+      "Área Profesional": [9, 8, 7, 6, 9],
+      "Área Social": [8, 7, 6, 9, 8],
+      "Área de Ocio": [7, 8, 6, 9, 7],
+      "Área Espiritual": [9, 6, 7, 8, 9]
+    }
+  }
+]);
+
